@@ -1,28 +1,18 @@
 function setup() {
-  createCanvas(400, 400);
+  button = createButton('Numero Faltante');
+  button.position(125, 120);
+  button.mousePressed(solution);
 }
 
-function draw() {
-  background(0, 255, 255);
-  fill(255, 255, 0);
-  circle(50, 50, 50);
-  fill(255, 255, 204);
-  triangle(100, 150, 200, 50, 300, 150);
-  fill(0, 102, 0);
-  square(100, 151, 200);
-  fill(255, 255, 255);
-  rect(130, 225, 20, 20);
-  rect(150, 225, 20, 20);
-  rect(130, 245, 20, 20);
-  rect(150, 245, 20, 20);
-  rect(230, 225, 20, 20);
-  rect(250, 225, 20, 20);
-  rect(230, 245, 20, 20);
-  rect(250, 245, 20, 20);
-  fill(153, 76, 0);
-  rect(170, 301, 30, 50);
-  rect(200, 301, 30, 50);
-  fill(255, 255, 0);
-  circle(185, 325, 10);
-  circle(215, 325, 10);
+function solution(a) {
+var a = [1, 2, 3, 5];
+  count = 5;
+var missing = [];
+
+for (var i = 1; i <= count; i++) {
+  if (a.indexOf(i) == -1) {
+    missing.push(i);
+    console.log(missing)
+  }
+}
 }
